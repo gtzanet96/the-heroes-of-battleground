@@ -1,0 +1,16 @@
+//custom variables
+$primary: #001C3D;
+$secondary: #3A0514;
+
+//import the functions and variables so that we can add custom colors to the map
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$custom-theme-colors: (
+    "header-color": #060020
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+//import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';

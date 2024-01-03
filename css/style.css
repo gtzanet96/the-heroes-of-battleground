@@ -1,0 +1,1245 @@
+/*default css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body-home {
+  background: transparent linear-gradient(180deg, #001C3D 0%, #3A0514 100%);
+  background-repeat: no-repeat;
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  flex-direction: column;
+}
+
+.navbar1 {
+  height: 49px;
+  line-height: 49px;
+  box-shadow: 0px 15px 35px #26D6491F;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-img {
+    /* width: 122px;
+    height: 29px; */
+    width: 86px;
+    height: 43px;
+    margin-left: 18px;
+  }
+
+  .nav-text {
+    height: 22px;
+    margin-right: 18px;
+    /*
+    (1)The first normal represents the font-style (normal in this case), the second normal represents the font-variant (normal), and 900 represents the font-weight (which is a numeric value 
+    indicating the thickness of the characters)
+    (2)31px font size and 35px line height (something like text padding)
+    */
+    text-align: right;
+    font: normal normal 900 18px/35px Roboto;
+    letter-spacing: 0px;
+    color: #47A7E1;
+  }
+}
+
+.container_1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .container_2 {
+    display: flex; 
+    flex-direction: column; 
+    margin: 33px;
+
+    .hero-text {
+      /* to ensure it is responsive and doesn't overflow the container */
+      max-width: 100%;
+      /* the element should always take up the entire width of its container */
+      width: 100%;
+      height: 46px;
+      text-align: left;
+      font: normal normal 900 38px/46px Roboto;
+      letter-spacing: 0px;
+      color: #A4A0A0;
+      margin-top: 15px;
+    }
+
+    .rectangle10 {
+      min-height: 320px;
+      display: flex;
+      background: #9b99a81a;
+      border-radius: 6px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      .rectangle5 {
+        border: 2px solid #403B3B;
+        position: relative; 
+        flex-grow: 1; 
+        margin: 15px; 
+        padding-bottom: 40px;
+        min-width: 200px;
+
+        .group5 {
+          position: relative;
+          width: 410px;
+          height: 347px;
+          margin: 0 auto; /* για να κεντραριστει στον οριζοντιο αξονα*/
+          margin-top: 40px;
+    
+          .enemy-img {
+            width: 180px;
+            height: 249px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1; /* για να φαινεται το hitpoints marker πανω απ την εικονα*/
+          }
+          
+          .line1 {
+            position: absolute;
+            top: 44px;
+            left: 81px;
+            width: 0px;
+            height: 276px;
+            border: 1px solid #403B3B; /* instead of 2px solid as described in the use case*/
+            z-index: -2; /* για να φαινεται το line κατω απ την εικονα*/
+            display: none;
+          }
+          
+          .path1 {
+            position: absolute;
+            top: 197px;
+            left: 128px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%; /* κυκλος */
+            background: transparent radial-gradient(closest-side at 50% 50%, #FB1D59 0%, #48091B 100%) 0% 0% no-repeat padding-box;
+            box-shadow: inset 3px -4px 5px #FCDE4840, 0px 2px 6px #000000CC;
+            pointer-events: none;
+            display: none; /* so that we can display it only when the image loads as well */
+          }
+          
+          .health-text {
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            width: 26px;
+            height: 27px;
+            text-align: left;
+            font: normal normal 900 22px/27px Roboto;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            pointer-events: none;
+          }
+          
+          .path2 {
+            position: absolute;
+            top: 319px;
+            left: 81px;
+            width: 328px;
+            height: 0px;
+            border: 1px solid #403B3B; /* instead of 2px solid as described in the use case*/
+            z-index: -2; /* για να φαινεται το line κατω απ την εικονα*/
+          }
+          
+          .enemy-name {
+            position: absolute;
+            top: 92px;
+            left: 195px;
+            width: 200px;
+            height: 60px;
+            text-align: left;
+            font: normal normal bold 22px/33px Roboto;
+            letter-spacing: 0px;
+            color: #D3A842;
+            pointer-events: none;
+          }
+          
+          .line4 {
+            position: absolute;
+            top: 157px;
+            left: 195px;
+            width: 215px;
+            height: 0px;
+            border: 1px solid #403B3B; /* instead of 2px solid as described in the use case*/
+            pointer-events: none;
+          }
+          
+          .enemy-text {
+            position: absolute;
+            top: 172px;
+            left: 195px;
+            width: 200px;
+            height: 42px;
+            text-align: left;
+            font: normal normal normal 16px/20px Roboto;
+            letter-spacing: 0px;
+            color: #AC9B77;
+            pointer-events: none;
+          }
+          
+          .minions-row {
+            position: absolute;
+            top: 279px;
+            left: 91px;
+            pointer-events: none;
+            /* για τα κενα αναμεσα απ τα minions */
+            div {
+              padding-right: calc(var(--bs-gutter-x) * 0);
+            }
+          }
+          
+          .text-random {
+            position: relative;
+            top: -47px;
+            left: 28px;
+            width: 15px;
+            height: 28px;
+            text-align: left;
+            font: normal normal 900 28px/28px Roboto;
+            letter-spacing: 0px;
+            color: #AC9B77;
+            z-index: 2;
+            pointer-events: none;
+          }
+        }
+      }
+
+      .group17 {
+        margin-top: 52px;
+        margin-bottom: 60px;
+        width: 450px;
+        height: 263px; /* τα 253 του usecase + 10 για το εξτρα margin που εδωσα στο button εγω*/
+        flex-grow: 1;
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .measure-text {
+          width: 450px;
+          height: 61px;
+          text-align: left;
+          font: normal normal 900 22px/34px Roboto;
+          letter-spacing: 0px;
+          color: #A4A0A0;
+          pointer-events: none;
+        }
+        
+        .banshee-text {
+          margin-top: 20px;
+          width: 450px;
+          height: 91px;
+          text-align: left;
+          font: normal normal 300 36px/48px Roboto;
+          letter-spacing: 0px;
+          color: #FFFFFF;
+          pointer-events: none;
+        }
+        
+        .challenge-text {
+          margin-top: 5px;
+          width: 450px;
+          height: 24px;
+          text-align: left;
+          font: normal normal normal 20px/30px Roboto;
+          letter-spacing: 0px;
+          color: #FFFFFF;
+          pointer-events: none;
+        }
+        
+        .accept-btn {
+          margin-top: 10px;
+          width: 410px;
+          height: 42px;
+          border: none;
+          margin-top: 15px;
+          background: #A7380E 0% 0% no-repeat padding-box;
+          border-radius: 6px;
+          transition: background-color 0.3s ease-out;
+          font: normal normal 900 18px/22px Roboto;
+          letter-spacing: 0px; /* 0px in use case */
+          color: #FFFFFF;
+          /* display: inline-block; */
+        }
+        
+        .accept-btn:hover {
+          background-color: #d65120;
+        }
+      }  
+    }  
+  }
+
+  footer {
+    min-height: 62px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    .footer-text-1, .footer-text-2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      line-height: 32px;
+      letter-spacing: 0px;
+      font-weight: 300; /* Light */
+      flex: 1 1 100%;
+      min-width: 200px;
+      /* Color set with an RGBA value, allowing us to control the opacity of the child. 
+        With color: #FFFFFF; and opacity: 0.5, the child's opacity: 1 would only mean a full opacity on the 0.5th color of the ancestor. So it would stay 0.5 of the starting color. */
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+    }
+
+    .hs-sign {
+        opacity: 1;
+      }
+
+    .rapidAPI {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      line-height: 32px;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      font-weight: 500; /* Medium */
+      opacity: 1;
+    }
+  }
+}
+
+/* Media queries - Custom styles for different screen sizes*/
+
+@media (min-width: 768px) {
+  /* Medium screens and above */
+  .navbar1 {
+    height: 69px;
+    line-height: 69px;
+    box-shadow: 0px 25px 45px #26D6491F;
+  
+    .nav-img {
+      /* width: 183px;
+      height: 43px; */
+      width: 103px;
+      height: 52px;
+      margin-left: 24px;
+    }
+  
+    .nav-text {
+      height: 29px;
+      margin-right: 24px;
+      font: normal normal 900 24px/35px Roboto;
+    }
+  }
+
+  .container_1 {
+
+    .container_2 {
+      margin: 39px;
+      margin-top: 45px;
+
+      .hero-text {
+        height: 53px;
+        font: normal normal 900 44px/58px Roboto;
+      }
+
+      .rectangle10 {
+        .rectangle5 {
+          .group5 {
+            width: 540px;
+            height: 402px;
+            margin-top: 0px;
+      
+            .enemy-img {
+              width: 220px;
+              height: 304px;
+            }
+            
+            .line1 {
+              top: 71.5px;
+              left: 101.5px;
+              height: 304px;
+            }
+            
+            .path1 {
+              top: 241px;
+              left: 157px;
+              width: 63px;
+              height: 63px;
+            }
+            
+            .health-text {
+              top: 14px;
+              left: 15px;
+              width: 33px;
+              height: 34px;
+              font: normal normal 900 28px/34px Roboto;
+            }
+            
+            .path2 {
+              top: 374.5px;
+              left: 102px;
+              width: 437px;
+            }
+            
+            .enemy-name {
+              top: 118px;
+              left: 240px;
+              width: 279px;
+              height: 29px;
+              font: normal normal bold 24px/29px Roboto;
+            }
+            
+            .line4 {
+              top: 152px;
+              left: 240px;
+              width: 299px;
+            }
+            
+            .enemy-text {
+              top: 167px;
+              left: 240px;
+              width: 279px;
+            }
+            
+            .minions-row {
+              position: absolute;
+              top: 334px;
+              left: 132px;
+
+              div {
+                padding-right: calc(var(--bs-gutter-x) * 0.7);
+              }
+            }
+          }
+        }
+
+        .group17 {
+          width: 540px;
+          height: 181px;
+          margin-bottom: 70px;
+
+          .measure-text {
+            width: 540px;
+            height: 29px;
+            font: normal normal 900 24px/40px Roboto;
+          }
+          
+          .banshee-text {
+            width: 540px;
+            height: 48px;
+            margin-top: 25px;
+            font: normal normal 300 40px/48px Roboto;
+          }
+          
+          .challenge-text {
+            width: 540px;
+            height: 27px;
+            font: normal normal normal 22px/30px Roboto;
+          }
+          
+          .accept-btn {
+            width: 500px;
+            height: 42px;
+            margin-top: 25px;
+            font: normal normal 900 18px/22px Roboto;
+          }
+        }
+      }
+    }
+    
+    footer {
+      min-height: 43px;
+
+      .footer-text-1 {
+        text-align: left;
+        padding-left: 24px;
+      }
+      .footer-text-2 {
+        text-align: right;
+        padding-right: 24px;
+      }
+      .footer-text-1, .footer-text-2 {
+        flex: 1 1 48%;
+      }  
+    }    
+  }
+}
+
+@media (min-width: 992px) {
+  /* Large screens and above */
+  .navbar1 {
+    box-shadow: 0px 30px 60px #26D6491F;
+    
+    .nav-img {
+      margin-left: 16px;
+    }
+  
+    .nav-text {
+      height: 33px;
+      margin-right: 16px;
+      font: normal normal 900 27px/35px Roboto;
+    }
+  }
+
+  .container_1 {
+
+    .container_2 {
+      margin: 31px;
+      margin-top: 70px;
+
+      .hero-text {
+        height: 58px;
+        font: normal normal 900 48px/62px Roboto;
+      }
+
+      .rectangle10 {
+        .rectangle5 {
+          .group5 {
+            margin-top: 0px;
+          }
+        }
+        .group17 {
+          width: 301px;
+          height: 380px;
+          margin-bottom: 52px;
+
+          .measure-text {
+            width: 301px;
+            height: 112px;
+            font: normal normal 900 26px/40px Roboto;
+          }
+          
+          .banshee-text {
+            width: 301px;
+            height: 101px;
+            margin-top: 39px;
+            font: normal normal 300 42px/50px Roboto;
+          }
+          
+          .challenge-text {
+            width: 301px;
+            height: 61px;
+            margin-top: 10px;
+            font: normal normal normal 24px/32px Roboto;
+          }
+          
+          .accept-btn {
+            width: 261px;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+    
+    footer {
+      margin-top: 332px;
+
+      .footer-text-1 {
+        padding-left: 18px;
+      }
+      .footer-text-2 {
+        padding-right: 18px;
+      }
+    }    
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar1 {
+    
+    .nav-img {
+      margin-left: 20px;
+    }
+  
+    .nav-text {
+      height: 37px;
+      margin-right: 20px;
+      font: normal normal 900 31px/35px Roboto;
+    }
+  }
+
+  .container_1 {
+    .container_2 {
+      .hero-text {
+        margin-left: 10%;
+      }
+      .rectangle10 {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+    }
+  }
+  
+  footer {
+    margin-top: 295px;
+    margin-bottom: 10px;
+
+    .footer-text-1 {
+      padding-left: 20px;
+    }
+    .footer-text-2 {
+      padding-right: 20px;
+    }
+  } 
+}
+
+@media (min-width: 1920px) {
+  /* Extra-extra-large screens and above */
+  
+  .container_1 {
+
+    .container_2 {
+      margin-left: 390px;
+      margin-right: 390px;
+      margin-top: 100px;
+      margin-bottom: 0px;
+
+      .hero-text {
+        height: 61px;
+        font: normal normal 900 50px/62px Roboto;
+        margin-left: 0%;
+      }
+
+      .rectangle10 {
+        margin-left: 0%;
+        margin-right: 0%;
+
+        .rectangle5 {
+          padding-bottom: 0px;
+          flex-grow: 0; /* για να μην πιανει εξτρα χωρο εκτος απο αυτον που θελουμε (και να μοιαζει ιδιο με του design) */
+
+          .group5 {
+            width: 539px;
+            height: 402px;
+            margin: 40px;
+            margin-top: 0px;
+          }
+        }
+        .group17 {
+          width: 426px;
+          height: 380px;
+          margin-bottom: 40px;
+
+          .measure-text {
+            width: 426px;
+            height: 78px;
+            font: normal normal 900 28px/44px Roboto;
+          }
+          
+          .banshee-text {
+            width: 426px;
+            height: 103px;
+            margin-top: 85px;
+            font: normal normal 300 44px/50px Roboto;
+          }
+          
+          .challenge-text {
+            width: 426px;
+            height: 32px;
+            font: normal normal normal 26px/32px Roboto;
+          }
+          
+          .accept-btn {
+            width: 386px;
+            height: 42px;
+            margin-top: 30px;
+          }
+        }
+      }
+    }   
+  }
+}
+
+
+
+
+
+/* Results page */
+
+.body-results {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: transparent linear-gradient(180deg, #001C3D 0%, #3A0514 100%);
+  background-attachment: fixed; /* ensures that the background image remains fixed in place when the content is scrolled */
+}
+
+.container_a {
+  .container_b {
+
+    .long-battle-text {
+      width: 510px;
+      height: 46px;
+      text-align: left;
+      font: normal normal 900 38px/46px Roboto;
+      margin-top: 39px;
+      margin-bottom: 20px;
+      margin-left: 33px;
+      color: #A4A0A0;
+    }
+  }
+
+  [class^="lineup"] {
+    background: transparent linear-gradient(180deg, #060020B3 0%, #06002000 100%) 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    z-index: 1;
+    padding-top: 10px;
+  }
+  
+  .opponent-text {
+    width: 510px;
+    height: 34px;
+    margin-left: 33px;
+    text-align: left;
+    font: normal normal normal 28px/37px Roboto;
+    letter-spacing: 0px;
+    color: #AC9B77;
+  }
+  
+  .line5 {
+    height: 0px;
+    margin-left: 33px;
+    margin-right: 33px;
+    margin-top: 7px;
+    margin-bottom: 20px; /* για να φαινεται καλυτερα το skeleton ενω φορτωνει */
+    border: 1px solid #403B3B; /* instead of 2px solid as described in the use case*/
+    pointer-events: none;
+  }
+
+  .cont {
+    width: 180px;
+    height: 249px;
+    margin: 0 auto;
+    position: relative;
+
+    .res-char-img {
+      width: 180px;
+      height: 249px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1; /* για να φαινεται το hitpoints marker πανω απ την εικονα*/
+    }
+
+    .path1.results {
+      position: absolute;
+      top: 198px;
+      right: 0px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%; /* κυκλος */
+      background: transparent radial-gradient(closest-side at 50% 50%, #FB1D59 0%, #48091B 100%) 0% 0% no-repeat padding-box;
+      box-shadow: inset 3px -4px 5px #FCDE4840, 0px 2px 6px #000000CC;
+      pointer-events: none;
+      z-index: 2;
+      display: none; /* so that we can display it only when the image loads as well */
+    }
+
+    .health-text.results {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      width: 26px;
+      height: 27px;
+      font: normal normal 900 22px/27px Roboto;
+      color: #FFFFFF;
+    }
+  }
+
+  .group22 {
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .my-custom-col-padding {
+    margin: -1.1rem;
+    margin-bottom: 2.3rem;
+  }
+
+  .enemy-minion-img {
+    width: 190px;
+    height: 262px;
+    display: block;
+    margin: auto;
+  }
+
+  .rectangle10-results {
+    min-height: 200px;
+    margin-top: 10px;
+    margin-left: 33px;
+    margin-right: 33px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #9B99A81A 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+  }
+
+  .rectangle11 {
+    flex-grow: 1; 
+    margin: 15px;
+    min-width: 200px;
+    width: 315px;
+    border: 1px solid #403B3B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .result-text {
+    display: block;
+    margin: 30px auto;
+    height: 63px;
+    text-align: center;
+    font-weight: 100; /* roboto-thin */
+  }
+
+  .result-text.victory {
+    width: 169px;
+    font: normal normal 100 50px/63px Roboto;
+    color: #07BA0F;
+    text-shadow: 5px 5px 25px #B9DB47A6;
+  }
+
+  .result-text.defeat {
+    width: 180px;
+    font: normal normal 100 50px/63px Roboto;
+    color: #F13756;
+    text-shadow: 5px 5px 25px #FF80BBA6;
+  }
+
+  .group17-results {
+    flex-grow: 1;
+    margin: 0 30px;
+    margin-top: 52px;
+    padding-bottom: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .opponent-score {
+    display: block;
+    width: 450px;
+    height: 29px;
+    font: normal normal 900 24px/34px Roboto;
+    color: #A4A0A0;
+  }
+
+  .team-score {
+    display: block;
+    margin-top: 20px;
+    width: 450px;
+    height: 43px;
+    font: normal normal 300 36px/48px Roboto;
+  }
+
+  .enemy-final-text {
+    display: block;
+    margin-top: 5px;
+    width: 450px;
+    height: 24px;
+    font: normal normal normal 20px/30px Roboto;
+  }
+
+  footer {
+    min-height: 62px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 74px;
+    margin-bottom: 10px;
+
+    .footer-text-1, .footer-text-2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      line-height: 32px;
+      letter-spacing: 0px;
+      font-weight: 300; /* Light */
+      flex: 1 1 100%;
+      min-width: 200px;
+      /* Color set with an RGBA value, allowing us to control the opacity of the child. 
+        With color: #FFFFFF; and opacity: 0.5, the child's opacity: 1 would only mean a full opacity on the 0.5th color of the ancestor. So it would stay 0.5 of the starting color. */
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+    }
+
+    .hs-sign {
+        opacity: 1;
+      }
+
+    .rapidAPI {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      line-height: 32px;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      font-weight: 500; /* Medium */
+      opacity: 1;
+    }
+  }
+}
+
+/* Custom styles for different screen sizes */
+
+@media (min-width: 768px) {
+  /* Medium screens and above */
+  .container_a {
+    .container_b {
+  
+      .long-battle-text {
+        width: 690px;
+        height: 53px;
+        font: normal normal 900 44px/58px Roboto;
+        margin-top: 60px;
+        margin-bottom: 25px;
+        margin-left: 39px;
+      }
+    }
+    
+    .opponent-text {
+      width: 690px;
+      height: 37px;
+      font: normal normal normal 30px/37px Roboto;
+      margin-left: 39px;
+    }
+    
+    .line5 {
+      margin-left: 39px;
+      margin-right: 39px;
+    }
+  
+    .rectangle10-results {
+      min-height: 200px;
+      margin: 0 39px;
+      margin-top: 43px; /* 80 - 37 που εχει default το bootstrap col της προηγουμενης σειρας*/
+    }
+  
+    .rectangle11 {
+      width: 315px;
+    }
+  
+    .result-text.victory {
+      font: normal normal 100 53px/63px Roboto;
+    }
+  
+    .result-text.defeat {
+      font: normal normal 100 53px/63px Roboto;
+    }
+  
+    .group17-results {
+      margin: 15px;
+      margin-top: 42px;
+      padding-bottom: 15px;
+      text-align: left;
+    }
+  
+    .opponent-score {
+      width: 315px;
+      font: normal normal 900 24px/40px Roboto;
+    }
+  
+    .team-score {
+      width: 315px;
+      height: 48px;
+      font: normal normal 300 40px/50px Roboto;
+    }
+  
+    .enemy-final-text {
+      width: 315px;
+      height: 59px;
+      font: normal normal normal 22px/32px Roboto;
+    }
+  
+    footer {
+      min-height: 43px;
+
+      .footer-text-1 {
+        text-align: left;
+        padding-left: 24px;
+      }
+      .footer-text-2 {
+        text-align: right;
+        padding-right: 24px;
+      }
+      .footer-text-1, .footer-text-2 {
+        flex: 1 1 48%;
+      }  
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  /* Large screens and above */
+  .navbar1 {
+    box-shadow: 0px 30px 60px #26D6491F;
+    
+    .nav-img {
+      margin-left: 16px;
+    }
+  
+    .nav-text {
+      height: 33px;
+      margin-right: 16px;
+      font: normal normal 900 27px/35px Roboto;
+    }
+  }
+
+  .container_a {
+    .container_b {
+  
+      .long-battle-text {
+        width: 930px;
+        height: 58px;
+        font: normal normal 900 48px/62px Roboto;
+        margin-top: 80px;
+        margin-bottom: 30px;
+        margin-left: 31px;
+      }
+    }
+    
+    .opponent-text {
+      width: 897px;
+      height: 38px;
+      font: normal normal normal 32px/39px Roboto;
+      margin-left: 31px;
+    }
+    
+    .line5 {
+      margin-left: 31px;
+      margin-right: 31px;
+    }
+    
+    .cont {
+      margin-top: 30px;
+    }
+
+    .group22 {
+      margin-bottom: 60px;
+    }
+    
+    .my-custom-col-padding {
+      margin: -0.8rem;
+    }
+
+    .rectangle10-results {
+      margin: 0 31px;
+      margin-top: 73px; /* 110 - 37 που εχει default το bootstrap col της προηγουμενης σειρας*/
+    }
+  
+    .rectangle11 {
+      width: 435px;
+    }
+  
+    .result-text.victory {
+      font: normal normal 100 57px/68px Roboto;
+    }
+  
+    .result-text.defeat {
+      font: normal normal 100 57px/68px Roboto;
+    }
+  
+    .group17-results {
+      margin: 15px;
+      margin-top: 52px;
+      padding-bottom: 40px;
+    }
+  
+    .opponent-score {
+      width: 435px;
+      height: 32px;
+      font: normal normal 900 26px/40px Roboto;
+    }
+  
+    .team-score {
+      width: 435px;
+      height: 51px;
+      font: normal normal 300 42px/50px Roboto;
+    }
+  
+    .enemy-final-text {
+      width: 435px;
+      height: 29px;
+      font: normal normal normal 24px/32px Roboto;
+    }
+
+    footer {
+      margin-top: 80px;
+
+      .footer-text-1 {
+        padding-left: 18px;
+      }
+      .footer-text-2 {
+        padding-right: 18px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Extra-extra-large screens and above */
+  .navbar1 {
+    
+    .nav-img {
+      margin-left: 20px;
+    }
+  
+    .nav-text {
+      height: 37px;
+      margin-right: 20px;
+      font: normal normal 900 31px/35px Roboto;
+    }
+  }
+
+  .container_a {
+    .container_b {
+  
+      .long-battle-text {
+        width: 1140px;
+        height: 61px;
+        font: normal normal 900 50px/62px Roboto;
+        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 30px;
+      }
+    }
+    
+    .opponent-text {
+      width: 1140px;
+      height: 41px;
+      font: normal normal normal 34px/41px Roboto;
+      margin: 0 auto;
+      /* margin-top: 10px; */
+    }
+    
+    .line5 {
+      width: 1140px;
+      margin: 0 auto;
+      margin-top: 7px;
+    }
+
+    .group22 {
+      margin-bottom: 60px;
+    }
+
+    .enemy-minion-img {
+      width: 242px;
+      height: 334px;
+    }
+
+    .my-custom-col-padding {
+      margin: -1.1rem;
+    }
+
+    .rectangle10-results {
+      width: 1140px;
+      margin: auto;
+      margin-top: 120px;
+    }
+  
+    .rectangle11 {
+      width: 540px;
+      margin-right: 0px;
+    }
+  
+    .result-text.victory {
+      font: normal normal 100 60px/72px Roboto;
+    }
+  
+    .result-text.defeat {
+      font: normal normal 100 60px/72px Roboto;
+    }
+
+    .group17-results {
+      margin: 40px;
+      margin-top: 52px;
+      padding-bottom: 0px;
+    }
+  
+    .opponent-score {
+      width: 505px;
+      height: 34px;
+      font: normal normal 900 28px/44px Roboto;
+    }
+  
+    .team-score {
+      width: 505px;
+      height: 53px;
+      font: normal normal 300 44px/50px Roboto;
+    }
+  
+    .enemy-final-text {
+      width: 505px;
+      height: 32px;
+      font: normal normal normal 26px/32px Roboto;
+    }
+
+    footer {
+      margin-top: 100px;
+      margin-bottom: 10px;
+
+      .footer-text-1 {
+        padding-left: 20px;
+      }
+      .footer-text-2 {
+        padding-right: 20px;
+      }
+    } 
+  }
+  /* Button Tap State */
+  /*
+  .custom-button.tapped {
+    background-color: #2ecc71;
+    transition: none;  No transition on tap 
+  }*/
+}
+
+
+
+
+/* for while the images are loading, coming through the api */
+.skeleton {
+  opacity: 0.2;
+  border-radius: 10%;
+  animation: skeleton-loading 1.5s linear infinite alternate;
+  z-index: 4;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 10%, 60%);
+    /* background-image: url('src\images\minion_card.png'); */
+  }
+
+  100% {
+    background-color: hsl(200, 10%, 95%);
+    /* background-image: url('src\images\minion_card.png'); */
+  }
+}
+
+/* .loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  z-index: 0;
+  position: relative;
+  left: -150px;
+} 
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} */

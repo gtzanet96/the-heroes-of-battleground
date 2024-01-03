@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- for roboto fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap">
+    <title>Heroes of Prime</title>
+</head>
+<body class="body-home">
+    <nav class="navbar1 bg-header-color">
+        <img class="nav-img" src="src\images\logo_new_webp@2x.png" alt="prime_logo"></img>
+        <div class="nav-text">The Heroes of Battleground!</div>
+    </nav>
+    <!-- container_1 is for keeping the main content and the footer in a flexbox with space between, so that the footer stays at the bottom of the screen -->
+    <div class="container_1">
+        <!-- container_2 is for keeping the two different parts of the main content (h1 and big rectangle) as a single object, so that the previous flex works properly -->
+        <div class="container_2">
+            <h1 class="hero-text">
+                You are on a quest!
+            </h1>
+            <div class="rectangle10">
+                <div class="rectangle5">
+                    <section class="group5">
+                        <img class="enemy-img skeleton" id="enemy-hero-img" alt="">
+                        <div class="line1"></div>
+                        <div class="path1">
+                            <span class="health-text" id="health-text"></span>
+                        </div>
+                        <span class="enemy-name" id="enemy-name">[Hero's name here...]</span>
+                        <div class="line4"></div>
+                        <div class="path2"></div>
+                        <span class="enemy-text" id="enemy-text">[Hero's text here...]</span>
+                        <div class="row minions-row">
+                            <div class="col"><img src="src\images\ICON_C~1.PNG" alt="icon-small"><div class="text-random">?</div></div>
+                            <div class="col"><img src="src\images\ICON_C~1.PNG" alt="icon-small"><div class="text-random">?</div></div>
+                            <div class="col"><img src="src\images\ICON_C~1.PNG" alt="icon-small"><div class="text-random">?</div></div>
+                            <div class="col"><img src="src\images\ICON_C~1.PNG" alt="icon-small"><div class="text-random">?</div></div>
+                        </div>
+                    </section>
+                </div>
+                <div class="group17">
+                    <div class="measure-text">Measure against the former leader of the Horde!</div>
+                    <div class="banshee-text">The Banshee Queen awaits...</div>
+                    <div class="challenge-text">Are you prepared for the challenge?</div>
+                    <a href="results.html"><button class="accept-btn" id="accept-btn">Accept</button></a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-text-1">
+                Frontend Case Study, inspired by <span class="rapidAPI">RapidAPI</span> and <img class="hs-sign" src="src\images\logo_new_webp.png">
+            </div>
+            <div class="footer-text-2">
+                Giorgos Tzanetakis © 2023
+            </div>
+        </footer>
+    </div>
+    <script src="js/enemy_boss_request.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
